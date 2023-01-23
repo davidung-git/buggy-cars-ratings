@@ -2,7 +2,7 @@
 
 Bug report for 3 critical bugs in the application
 
-## 1 - Viewing any popular model will 
+## 1 - Viewing any popular model will cause the page to be stuck in loading state
 
 Expected: 
 User can view the selected car model and all details are displayed correctly
@@ -37,7 +37,7 @@ More Info:
 The loading error is due to a broken/incorrect href. 
 
 
-## 3 - Overall rating page - Table column sorting is broken
+## 3 - Overall rating page - Table column sorting is broken/inconsistent
 
 Expected: 
 Table will be sorted by the selected column in ASC order (first click) and the DESC order (second click) etc.
@@ -50,7 +50,7 @@ Steps:
 1. Go to landing page
 2. Select "Overall Rating" option
 3. Click a column header to sort
-4. BUG:
+4. BUG: Column sorting is inconsistent or broken
 
 More Info:
 The table is not optimised and is not consistent
