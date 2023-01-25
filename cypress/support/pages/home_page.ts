@@ -1,9 +1,12 @@
+import { randomInt } from "crypto"
+
 const homeTitle = '.display-4'
 const loginField = '.input-sm'
 const passwordField = '.ng-pristine'
 const loginButton = '.btn-success'
 const popularMake = ':nth-child(1) > .card > a > .img-fluid'
 const overallRating = ':nth-child(3) > .card > a > .img-fluid'
+const sortThisColumn = 'thead > tr'
 
 class homePage {
 
@@ -25,6 +28,20 @@ class homePage {
     viewOverallRating() {
         cy.get(overallRating).click()
         cy.url().should('include', '/overall')
+    }
+
+    sortColumn(column: string) {
+        let ratingColumn: Array<string> 
+        ratingColumn = ["Make", "Model", "Rank", "Votes", "Engine"]
+        
+        ratingColumn.forEach(function (rating) {
+            if (rating == column) {
+                cy.get(sortThisColumn)
+                .contains(column)
+                .click()
+            }
+        })
+        cy.wait(2500)
     }
 }
 
