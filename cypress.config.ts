@@ -49,7 +49,7 @@ async function setupNodeEvents(
 export default defineConfig({
   e2e: {
     baseUrl: 'https://buggy.justtestit.org',
-    specPattern: "**/*.feature",
+    // specPattern: "**/*.feature",
     setupNodeEvents,
   },
 });

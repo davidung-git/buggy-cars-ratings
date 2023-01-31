@@ -41,7 +41,7 @@ class homePage {
                 .click()
             }
         })
-        cy.wait(2500)
+        cy.wait(2000)
     }
 }
 

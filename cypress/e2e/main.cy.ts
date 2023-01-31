@@ -26,9 +26,13 @@ describe('UI Automation test for Buggy Cars.', () => {
   it('will sort rating table by car make', () => {
     home.viewOverallRating()
     home.sortColumn("Make")
-    cy.get(".card-header").should(
+    cy.get('tbody > :nth-child(1) > :nth-child(2)').should(
       'contain.text', 
       'Alfa Romeo'
+    )
+    cy.get('tbody > :nth-child(2) > :nth-child(2)').should(
+      'not.contain.text', 
+      'Lamborghini'
     )
   })
 
